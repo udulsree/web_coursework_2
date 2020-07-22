@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="mstyles.css">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Football</title>
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <a href="home.html" class="home"></a> 
+    <div class="menu-toggle"></div>
+
+    <nav>
+      <ul>
+       <li><a class="Logo">BATTLE BALL | since 2010</a></li>
+       <li><a class="active" href="#home">HOME</a></li>
+       <li><a href="Football.html">About Football</a></li>
+       <li><a href="Gallery.html">Gallery</a></li>
+       <li><a href="Products.html">Store</a></li>
+       <li><a href="Quiz.html">Quiz</a></li>
+       <li><a href="Aboutus.html">About Us</a></li>
+
+     </ul>
+   </nav>	
+
+ </header>
+
+
+ <!--Slideshow container-->
+
+ <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1</div>
+    <div class="about_description" border-radius:8px; font-family:Comic Sans MS;">
+
+    </div>
+    <img src="football_13-wallpaper-1920x1080.jpg" style="width:100%">
+    <div class="text">WORLD'S MOST POPULAR GAME...</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2</div>
+    <div class="about_description"  border-radius:8px; font-family:Comic Sans MS;">
+
+    </div>
+    <img src="football_in_the_rain-wallpaper-1920x1080.jpg" style="width:100%">
+    <div class="text">#FOOTBALL</div>
+
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3</div>
+    <div class="about_description"  border-radius:8px; font-family:Comic Sans MS;">
+
+    </div>
+    <img src="football_16-wallpaper-1920x1080.jpg" style="width:100%">
+    <div class="text">IS A GAME OF MISTAKES...</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4</div>
+    <div class="about_description"  border-radius:8px; font-family:Comic Sans MS;">
+    </div>
+    <img src="GettyImages-1068456934.jpg" style="width:100%">
+    <div class="text">WHOEVER MAKES THE FEWEST MISTAKES WIN ;) </div>
+
+
+  </div>
+
+</div>
+
+<br>
+
+<!--Dot slideshow output design -->
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+
+<div class="paragraph">
+  <p >Battle Ball started in 2010. <br>
+    It is the first & the largest online football accessory store in Sri Lanka <br>
+    Battle Ball gives you wide variety of football wear, accessories and souvenirs.
+
+  </div>
+
+  <div class="containerx">
+   <div class="form">
+    <form name="forms" align=left method="dialog" onsubmit="return validateForm()">
+      <label>First Name</label><br/>
+      <input type="text" id="fname" name="firstname" placeholder="Your name"><br/>
+      <label>Email</label><br/>
+      <input type="text" id="email" name="email" placeholder="name@example.com"><br/>
+      <label>Comment</label><br/>
+      <textarea id="subject" name="subject" placeholder="About this page" style="height:200px"></textarea><br/>
+
+      <div class="rate">
+        <h3>Rate our website :</h3>
+        <fieldset class="rating">
+          <input type="radio" id="star5" name="rate" value="5" /><label for="star5" title="5">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" /><label for="star4" title="4">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" /><label for="star3" title="3">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" /><label for="star2" title="2">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" /><label for="star1" title="1">1 star</label>
+        </fieldset>
+      </div>
+      <br/><br/><br/><br/><br/><br/><br><br/>
+
+      <input type="submit" value="Submit">
+      <input type="Reset" value="Reset" >
+
+    </form>      
+  </div>
+</div>	
+
+
+
+
+<script type="text/javascript">
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+
+
+  function Submit(){
+   var name=document.getElementById("fname");
+   alert("Hello "+name.value+" Thank you for your feedback !");
+   return false;
+  }
+
+  function validateForm(){
+    var fn = document["forms"]["firstname"].value;
+    var e = document["forms"]["email"].value;
+    var s = document["forms"]["subject"].value;
+    var r = document["forms"]["rate"].value;
+    // console.log(fn);
+    // console.log(e);
+    // console.log(s);
+    // console.log(r);
+    if (fn == ""){
+      alert("Name cannot be empty");
+    }
+    else if (e == ""){
+      alert("email cannot be empty");
+    }
+    else if (s == ""){
+      alert("Please leave a comment");
+    }
+    else if (r == ""){
+      alert("There shouold be a rating");
+    } else{
+      Submit();
+    }
+  } 
+</script>
+
+</body>
+</html>

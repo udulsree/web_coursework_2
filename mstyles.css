@@ -1,0 +1,247 @@
+/* CSS styles */
+
+/* Rating CSS */
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/* Navigation Bar CSS */
+body {
+  margin:0;
+  padding:0;
+}
+.checked {
+  color: orange;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  width: 100%;
+  overflow: hidden;
+  font-size:20px;
+}
+
+
+li {
+  float:left;
+}
+
+
+li a {
+  display: block;
+  color: #000;
+  padding: 30px 35px;
+  text-decoration: none;
+  font-family:Comic Sans MS;
+}
+
+
+li a.active {
+  background-color: black;
+  color: red;
+  font-size: 20px;
+}
+
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Slideshow and other CSS styles */
+
+ /*{box-sizing: border-box;}*/
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */    
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+  padding:0;
+}
+
+/* Caption text */        
+.text {
+  color: #f2f2f2;
+  background-color: rgba(0,0,0,0.6);
+  font-size: 30px;
+  font-family:Comic Sans MS;
+  padding: 30px 30px;
+  position: absolute;
+  bottom: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.paragraph{
+  color: #f2f2f2;
+  background-color: rgba(0,0,0,0.1);
+  font-size: 30px;
+  font-family:Comic Sans MS;
+  padding: 30px 30px;
+  /*position: absolute;*/
+  top: 900px;
+  width: 100%;
+  text-align: left;
+}
+
+
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  
+
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+/*user feedback */
+ody {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  /*width: 20%;*/
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=Reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  
+}
+
+input[type=Reset]:hover {
+  background-color: #45a049;
+}
+
+.containerx {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+  overflow: hidden;
+}
